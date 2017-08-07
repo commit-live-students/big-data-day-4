@@ -2,7 +2,7 @@
 
 ## Let's Get Rolling - Student Pre-Read
 Before this lesson, we recommend you go through
-* [Hive](http://hive.apache.org/) adds some more structure to data and let's you write [HiveQL]
+* [Hive](http://hive.apache.org/) adds some more structure to data and let's you write HiveQL
 
 ## Learning Objectives
 * Understand what is HIVE/IMPALA and where does it fit in the Hadoop ecosystem
