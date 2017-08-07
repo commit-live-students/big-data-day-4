@@ -21,5 +21,5 @@ Before this lesson, we recommend you go through
 
 
 ## Post Reads
-* (https://cwiki.apache.org/confluence/display/Hive/LanguageManual), which is very close to SQL. You can also run [Hive on Amazon EMR](http://docs.aws.amazon.com/ElasticMapReduce/latest/DeveloperGuide/emr-hive.html)
+* [Hive](https://cwiki.apache.org/confluence/display/Hive/LanguageManual) is very close to SQL. You can also run [Hive on Amazon EMR](http://docs.aws.amazon.com/ElasticMapReduce/latest/DeveloperGuide/emr-hive.html)
 * [Hive cheat sheet](https://www.qubole.com/resources/hive-function-cheat-sheet/)
