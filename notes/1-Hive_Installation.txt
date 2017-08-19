@@ -1,0 +1,36 @@
+Download the package of Apache Hive hive-1.1.0+cdh5.11.0+1013
+
+https://www.cloudera.com/documentation/enterprise/release-notes/topics/cdh_vd_cdh_package_tarball_511.html#tarball_511x
+
+
+untar the file by typing
+
+tar -xvzf hive-1.1.0-cdh5.11.0.tar.gz
+
+sudo mv hive-1.1.0-cdh5.11.0 /usr/local/hive
+
+cd 
+
+sudo gedit ~/.bashrc
+
+export HIVE_HOME="/usr/local/hive"
+export PATH="$PATH:$HIVE_HOME/bin"
+
+source ~/.bashrc
+
+restart terminal :
+
+cd $HIVE_HOME/conf
+ls
+sudo cp hive-env.sh.template hive-env.sh
+
+ls
+
+sudo gedit hive-env.sh
+
+add
+
+export HADOOP_HOME=/usr/local/hadoop
+
+
+sudo apt-get install openjdk-8-jdk-headless

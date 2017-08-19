@@ -1,0 +1,51 @@
+Sqoop Installation
+
+
+
+tar the file move it to /usr/local/sqoop
+tar -xvzf sqoop	
+
+edit bashrc file
+
+export SQOOP_HOME=/usr/local/sqoop
+export PATH=$PATH:$SQOOP_HOME/bin
+
+source the bashrc file
+
+
+cd $SQOOP_HOME/conf
+
+do ls in the folder
+
+find this file and make a copy of it from template (sqoop-env-template.sh)
+
+sudo cp sqoop-env-template.sh sqoop-env.sh
+
+Open sqoop-env.sh and add the lines below
+
+export HADOOP_COMMON_HOME=/usr/local/hadoop (for common home)
+export HADOOP_MAPRED_HOME=/usr/local/hadoop (where thr jar file is)
+
+
+********************************************************************
+sudo apt-get update
+sudo apt-get install mysql-server
+sudo mysql_secure_installation
+
+
+type:  mysql -u root -p
+ and go to the mysql Prompt
+
+-------------------------------------------------
+We can download mysql-connector-java-5.1.42.tar.gz file from the following link.
+
+http://ftp.ntu.edu.tw/MySQL/Downloads/Connector-J/
+
+The following commands are used to extract mysql-connector-java tarball and move mysql-connector-java-5.1.30-bin.jar to /usr/local/sqoop/lib directory.
+
+sudo mv mysql-connector-java-5.1.30-bin.jar /usr/local/sqoop/lib
+*************************************************************************8
+
+Download jar file from  (java-json.jar)
+
+http://www.java2s.com/Code/Jar/j/Downloadjavajsonjar.htm

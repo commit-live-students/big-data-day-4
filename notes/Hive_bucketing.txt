@@ -1,0 +1,26 @@
+show databases;
+
+
+create database bucketing;
+
+use bucketing;
+
+create table input_table;
+
+create table input_table(street string,city string, zip int, state string, beds int, bath int, sq_ft int, type string, price float)
+ROW FORMAT DELIMITED FIELDS TERMINATED BY ',' STORED AS TEXTFILE;
+
+LOAD DATA LOCAL INPATH "/home/hadoop/Desktop/real_state.csv"  INTO TABLE input_table;
+
+select * from input_table;
+
+SET hive.exec.dynamic.partition=true;
+SET hive.exec.dynamic.partition.mode=non-strict;
+SET hive.exec.max.dynamic.partitions=2048;
+SET hive.exec.max.dynamic.partitions.pernode=256;
+SET hive.enforce.bucketing = true;
+
+create table bucket_table(street string, zip int, state string, beds int, bath int, sq_ft int, type string, price float)
+partitioned by (city string) clustered by (street) into 4 buckets row format delimited fields terminated by ',';
+
+insert into table bucket_table partition(city) select street , zip ,state, beds,bath, sq_ft,type,price,city from input_table;
