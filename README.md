@@ -10,6 +10,9 @@ Before this lesson, we recommend you go through
 * Components of HIVE & IMPALA
 * Extending HIVE where required to achieve different objectives
 
+## Notes
+[Notes](https://github.com/commit-live-students/big-data-day-4/tree/master/notes)
+
 ## Agenda
 * What is Hive
 * Hive Architecture
